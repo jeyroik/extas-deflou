@@ -1,0 +1,96 @@
+{
+  "name": "extas/deflou",
+  "repositories": [
+    {
+      "name": "df_applications_samples",
+      "scope": "extas",
+      "pk": "name",
+      "class": "extas\\components\\deflou\\applications\\samples\\ApplicationSample",
+      "aliases": ["dfApplicationsSamples", "df_applications_samples"]
+    },
+    {
+      "name": "df_applications",
+      "scope": "extas",
+      "pk": "name",
+      "class": "extas\\components\\deflou\\applications\\Application",
+      "aliases": ["dfApplications", "df_applications"]
+    }
+  ],
+  "plugins_install": [
+    {
+      "repository": "dfApplications",
+      "name": "DeFlou application",
+      "section": "df_applications"
+    },
+    {
+      "repository": "dfApplicationsSamples",
+      "name": "DeFlou application samples",
+      "section": "df_applications_samples"
+    }
+  ],
+  "df_applications_samples": [
+    {
+      "name": "example",
+      "title": "Example",
+      "description": "Example application sample",
+      "player": "jeyroik@gmail.com",
+      "parameters": {
+        "login": {
+          "name": "login",
+          "title": "Login",
+          "description": "Login name",
+          "value": "default"
+        },
+        "password": {
+          "name": "password",
+          "title": "Password",
+          "description": "Password",
+          "value": "default"
+        },
+        "endpoint": {
+          "name": "endpoint",
+          "title": "Endpoint",
+          "description": "Application endpoint",
+          "value": "https://jeyroik.ru/endpoint.php"
+        }
+      }
+    }
+  ],
+  "workflow_states_samples": [
+    {
+      "name": "request",
+      "title": "Request",
+      "description": "Request",
+      "parameters": {}
+    }
+  ],
+  "workflow_entities_samples": [
+    {
+      "name": "example_entity",
+      "title": "Example entity",
+      "description": "Example entity",
+      "parameters": {
+        "param1": {
+          "name": "param1",
+          "title": "Param 1",
+          "description": "Param 1",
+          "value": "default"
+        }
+      }
+    }
+  ],
+  "df_entity_to_state": [
+    {
+      "id": "@uuid4",
+      "entity": "example_entity",
+      "state": "request"
+    }
+  ],
+  "df_state_to_application": [
+    {
+      "id": "@uuid4",
+      "state": "request",
+      "application": "example"
+    }
+  ]
+}
