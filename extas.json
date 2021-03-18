@@ -79,18 +79,18 @@
       }
     }
   ],
-  "df_entity_to_state": [
+  "df_state_sample_to_entity_sample_maps": [
     {
       "id": "@uuid4",
-      "entity": "example_entity",
-      "state": "request"
+      "entity_sample_name": "example_entity",
+      "state_sample_name": "request"
     }
   ],
-  "df_state_to_application": [
+  "df_state_sample_to_application_sample_maps": [
     {
       "id": "@uuid4",
-      "state": "request",
-      "application": "example"
+      "state_sample_name": "request",
+      "application_sample_name": "example"
     }
   ]
 }
