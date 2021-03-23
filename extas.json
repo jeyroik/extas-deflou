@@ -14,9 +14,21 @@
       "pk": "name",
       "class": "extas\\components\\deflou\\applications\\Application",
       "aliases": ["dfApplications", "df_applications"]
+    },
+    {
+      "name": "df_stores",
+      "scope": "extas",
+      "pk": "name",
+      "class": "extas\\components\\deflou\\stores\\Store",
+      "aliases": ["dfStores", "df_stores"]
     }
   ],
   "plugins_install": [
+    {
+      "repository": "dfStores",
+      "name": "DeFlou store",
+      "section": "df_stores"
+    },
     {
       "repository": "dfApplications",
       "name": "DeFlou application",
@@ -26,6 +38,15 @@
       "repository": "dfApplicationsSamples",
       "name": "DeFlou application samples",
       "section": "df_applications_samples"
+    }
+  ],
+  "df_stores": [
+    {
+      "name": "main",
+      "title": "Официальный",
+      "description": "Официальный магазин приложений Deflou",
+      "player": "jeyroik",
+      "endpoint": "https://store.deflou.jeyroik.ru"
     }
   ],
   "df_applications_samples": [
